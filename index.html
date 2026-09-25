@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Git Small Publication</title>
+    <link rel="stylesheet" href="stylesheet.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <p class="eyebrow">Oh look I used an "eyebrow"</p>
+      <h1>Git Small Publication</h1>
+      <p>Reusable patterns for consistent design</p>
+      <div class="theme-controls">
+        <button class="button button-secondary" type="button" id="theme-toggle">
+          Toggle Theme
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section id="s1" aria-labelledby="s1-title">
+        <h2 id="s1-title">S1 Foundation / Reset</h2>
+        <p>
+          Small selective reset was used to establish a consistent baseline for
+          the design system.
+        </p>
+
+        <p>
+          Browser defaults like heading hierarchy, list structure, and focus
+          indicators have been preserved.
+        </p>
+      </section>
+
+      <section id="s2" aria-labelledby="s2-title">
+        <h2 id="s2-title">S2 Token Inventory</h2>
+        <p>
+          Semantic tokens are used instead of repeating raw values. These tokens
+          help create consistency across the design system.
+        </p>
+
+        <h3>Color</h3>
+
+        <div class="token-grid">
+          <div class="token-card">
+            <div class="color-swatch swatch-background"></div>
+            <p><code>--color-background</code></p>
+            <p>#f7f7f5</p>
+            <p>Primary background color</p>
+          </div>
+
+          <div class="token-card">
+            <div class="color-swatch swatch-surface"></div>
+            <p><code>--color-surface</code></p>
+            <p>#ffffff</p>
+            <p>Cards and elevated surfaces</p>
+          </div>
+
+          <div class="token-card">
+            <div class="color-swatch swatch-text"></div>
+            <p><code>--color-text</code></p>
+            <p>#1f2328</p>
+            <p>Primary text color</p>
+          </div>
+
+          <div class="token-card">
+            <div class="color-swatch swatch-action"></div>
+            <p><code>--color-action</code></p>
+            <p>#2457c5</p>
+            <p>Action color for buttons and links</p>
+          </div>
+        </div>
+
+        <h3>Typography</h3>
+
+        <div class="token-list">
+          <div class="token-row">
+            <code>--font-body</code>
+            <span>Arial, Helvetica, sans-serif</span>
+            <span>Body copy and interface text</span>
+          </div>
+
+          <div class="token-row">
+            <code>--font-display</code>
+            <span>Georgia, "Times New Roman", serif</span>
+            <span>Headings and display text</span>
+          </div>
+
+          <div class="token-row">
+            <code>--font-size-base</code>
+            <span>1rem</span>
+            <span>Default body</span>
+          </div>
+
+          <div class="token-row">
+            <code>--font-size-xl</code>
+            <span>1.75rem</span>
+            <span>Large headings</span>
+          </div>
+
+          <div class="token-row">
+            <code>--line-height-base</code>
+            <span>1.6</span>
+            <span>Paragraph spacing</span>
+          </div>
+        </div>
+
+        <h3>Spacing</h3>
+
+        <div class="token-list">
+          <div class="token-row">
+            <code>--space-xs</code>
+            <span>0.25rem</span>
+            <span>Very tight spacing for closely related elements</span>
+          </div>
+
+          <div class="token-row">
+            <code>--space-sm</code>
+            <span>0.5rem</span>
+            <span>Small gaps between related items</span>
+          </div>
+
+          <div class="token-row">
+            <code>--space-md</code>
+            <span>1rem</span>
+            <span>Default component spacing</span>
+          </div>
+
+          <div class="token-row">
+            <code>--space-lg</code>
+            <span>1.5rem</span>
+            <span>Large spacing</span>
+          </div>
+
+          <div class="token-row">
+            <code>--space-xl</code>
+            <span>2rem</span>
+            <span>Spacing for content groups</span>
+          </div>
+
+          <div class="token-row">
+            <code>--space-xxl</code>
+            <span>3rem</span>
+            <span>Section spacing</span>
+          </div>
+        </div>
+
+        <h3>Sizing and Measure</h3>
+
+        <div class="token-list">
+          <div class="token-row">
+            <code>--content-max</code>
+            <span>72rem</span>
+            <span>Maximum width for the overall page content</span>
+          </div>
+
+          <div class="token-row">
+            <code>--text-measure</code>
+            <span>65ch</span>
+            <span>Maximum readable line length for body text</span>
+          </div>
+        </div>
+
+        <h3>Radius</h3>
+
+        <div class="token-list">
+          <div class="token-row">
+            <code>--radius-sm</code>
+            <span>0.25rem</span>
+            <span>Small rounded corners</span>
+          </div>
+
+          <div class="token-row">
+            <code>--radius-md</code>
+            <span>0.5rem</span>
+            <span>Default rounded corners</span>
+          </div>
+
+          <div class="token-row">
+            <code>--radius-lg</code>
+            <span>1rem</span>
+            <span>Larger rounded corners</span>
+          </div>
+        </div>
+
+        <h3>Elevation</h3>
+
+        <div class="token-list">
+          <div class="token-row">
+            <code>--shadow-sm</code>
+            <span>0 1px 2px rgb(0 0 0 / 0.08)</span>
+            <span>Slight elevation for cards</span>
+          </div>
+
+          <div class="token-row">
+            <code>--shadow-md</code>
+            <span>0 4px 12px rgb(0 0 0 / 0.12)</span>
+            <span>Stronger elevation for more prominent surfaces</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="s3" aria-labelledby="s3-title">
+        <h2 id="s3-title">S3 Typography</h2>
+
+        <p>
+          The typography uses a serif display stack for headings and a sans
+          serif body stack for the content.
+        </p>
+
+        <p class="type-note">
+          Font source is just system fonts. Didn't see a need to go with other
+          custom fonts when the generic one works well. So, no external font
+          files or licenses are needed.
+        </p>
+
+        <div class="type-sample">
+          <h1>Display Heading One</h1>
+          <h2>Display Heading Two</h2>
+          <h3>Display Heading Three</h3>
+
+          <p>
+            This paragraph demonstrates the default body type, line height, and
+            readable measure used throughout the publication.
+          </p>
+
+          <p class="metadata">Published September 24, 2026 · 4 minute read</p>
+
+          <ul>
+            <li>Imagine a list item</li>
+            <li>Imagine another list item</li>
+            <li>Lists preserve browser structure</li>
+          </ul>
+
+          <p>
+            Inline code can appear like <code>var(--color-action)</code> within
+            normal body text.
+          </p>
+
+          <p>
+            This is an <a href="#">example text link</a> within a paragraph.
+          </p>
+        </div>
+
+        <h3>Fallback Behavior</h3>
+
+        <p>
+          Because I went with the most widely used default font stack, the body
+          will automatically fall back to helvetica and then the browser's
+          default sans serif font. Then if Georgia is unavailable, the display
+          text goes to times new roman followed by the browser's serif font.
+        </p>
+
+        <div class="fallback-sample">
+          <p>
+            Body fallback sample: readable sans-serif text remains available.
+          </p>
+          <h3>Display fallback sample</h3>
+        </div>
+      </section>
+
+      <section id="s4" aria-labelledby="s4-title">
+        <h2 id="s4-title">S4 Actions / States</h2>
+
+        <p>
+          Accessibility maintained and action states are clearly indicated for
+          buttons and links.
+        </p>
+
+        <h3>Text Link</h3>
+        <p>Read more in this <a href="#">example article link</a>.</p>
+
+        <h3>Buttons</h3>
+
+        <div class="action-group">
+          <button class="button button-primary">Primary Action</button>
+          <button class="button button-secondary">Secondary Action</button>
+          <button class="button button-primary" disabled>
+            Disabled Action
+          </button>
+        </div>
+
+        <p class="usage-note">
+          Primary buttons vs secondary buttons. I like to think of it like a
+          login and forgot password button. Login primary, forgot password
+          secondary. Disabled buttons remain visible but unavailable, and all
+          interactive elements preserve clear hover, active, and keyboard focus
+          states. Even added a little cursor icon to indicate a disabled link.
+        </p>
+      </section>
+
+      <section id="s5" aria-labelledby="s5-title">
+        <h2 id="s5-title">S5 Surfaces / Content Patterns</h2>
+
+        <p>
+          Surface patterns use shared spacing, border, radius, and elevation
+          tokens to create consistent content groups.
+        </p>
+
+        <h3>Card Patterns</h3>
+
+        <div class="surface-grid">
+          <article class="card">
+            <p class="metadata">Feature</p>
+            <h3>Standard Story Card</h3>
+            <p>
+              This card uses the default surface, border, spacing, and small
+              elevation token for regular publication content.
+            </p>
+            <a href="#">Read story</a>
+          </article>
+
+          <article class="card card-prominent">
+            <p class="metadata">Editor's Pick</p>
+            <h3>Prominent Story Card</h3>
+            <p>
+              This version uses stronger elevation and more spacing to give
+              important content greater visual emphasis.
+            </p>
+            <a href="#">Read featured story</a>
+          </article>
+        </div>
+
+        <h3>Notice</h3>
+
+        <aside class="notice">
+          <strong>Publication note:</strong>
+          This callout is used for adding information without replacing the main
+          article content.
+        </aside>
+
+        <h3>Media Placeholder</h3>
+
+        <div
+          class="media-placeholder"
+          role="img"
+          aria-label="Placeholder for publication media"
+        >
+          Media Placeholder
+        </div>
+
+        <p class="usage-note">
+          Standard cards use smaller spacing and prominent surfaces use larger
+          spacing and shadow for hierarchy.
+        </p>
+      </section>
+
+      <section id="s6" aria-labelledby="s6-title">
+        <h2 id="s6-title">S6 Control Foundations</h2>
+
+        <p>
+          Form controls inherit the type system and use consistent spacing,
+          border, and focus treatments. This section demonstrates foundational
+          controls only.
+        </p>
+
+        <div class="control-group">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+          />
+        </div>
+
+        <div class="control-group">
+          <label for="category">Category</label>
+          <select id="category" name="category">
+            <option>News</option>
+            <option>Culture</option>
+            <option>Features</option>
+          </select>
+        </div>
+
+        <fieldset class="control-group">
+          <legend>Newsletter preference</legend>
+
+          <label>
+            <input type="checkbox" name="newsletter" />
+            Receive weekly updates
+          </label>
+        </fieldset>
+
+        <fieldset class="control-group">
+          <legend>Preferred edition</legend>
+
+          <label>
+            <input type="radio" name="edition" value="digital" />
+            Digital
+          </label>
+
+          <label>
+            <input type="radio" name="edition" value="print" />
+            Print
+          </label>
+        </fieldset>
+
+        <button class="button button-primary" type="button">
+          Submit Example
+        </button>
+
+        <p class="usage-note">
+          Labels remain visible, controls inherit the site's typography, and
+          keyboard focus is shown clearly without removing native control
+          affordances.
+        </p>
+      </section>
+    </main>
+    <script>
+      const themeToggle = document.getElementById("theme-toggle");
+
+      themeToggle.addEventListener("click", function () {
+        const currentTheme =
+          document.documentElement.getAttribute("data-theme");
+
+        if (currentTheme === "dark") {
+          document.documentElement.removeAttribute("data-theme");
+        } else {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      });
+    </script>
+  </body>
+</html>

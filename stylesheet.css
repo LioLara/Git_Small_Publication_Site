@@ -1,0 +1,377 @@
+/*CSS by Lio*/
+:root {
+  /* Color Tokens */
+  --color-background: #f7f7f5;
+  --color-surface: #ffffff;
+  --color-text: #1f2328;
+  --color-text-muted: #5f6368;
+  --color-border: #d8dadd;
+
+  --color-action: #2457c5;
+  --color-action-hover: #19459f;
+  --color-action-text: #ffffff;
+
+  --color-focus: #b45309;
+
+  /* Typography Tokens */
+  --font-body: Arial, Helvetica, sans-serif;
+  --font-display: Georgia, "Times New Roman", serif;
+
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.75rem;
+  --font-size-xxl: 2.5rem;
+
+  --line-height-tight: 1.2;
+  --line-height-base: 1.6;
+
+  /* Spacing Tokens */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-xxl: 3rem;
+
+  /* Sizing & Measurement Tokens */
+  --content-max: 72rem;
+  --text-measure: 65ch;
+
+  /* Radius Tokens */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+
+  /* Elevation Tokens */
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.08);
+  --shadow-md: 0 4px 12px rgb(0 0 0 / 0.12);
+
+  /* S3 Responsiveness */
+  --font-size-h1-wide: 3rem;
+  --font-size-h2-wide: 2rem;
+  --font-size-h3-wide: 1.375rem;
+}
+
+/* Dark Mode Overrides */
+[data-theme="dark"] {
+  --color-background: #16181d;
+  --color-surface: #22262d;
+  --color-text: #f4f6f8;
+  --color-text-muted: #b6bdc7;
+  --color-border: #3c434d;
+
+  --color-action: #8ab4ff;
+  --color-action-hover: #b3ccff;
+  --color-action-text: #111318;
+
+  --color-focus: #ffb454;
+}
+
+main,
+.site-header {
+  width: min(100% - 2rem, var(--content-max));
+  margin-inline: auto;
+}
+
+section {
+  margin-block: var(--space-xxl);
+}
+
+/*S1 Selective Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+img {
+  display: block;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+/*S1 Selective Reset Ending*/
+
+/* S2 Token Inventory */
+
+.token-grid {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.token-card {
+  padding: var(--space-md);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+/* Adds structure to the typography section in token inventory */
+.token-list {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+/* Adds structure to the typography section in token inventory */
+.token-row {
+  display: grid;
+  gap: var(--space-sm);
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.color-swatch {
+  width: 100%;
+  height: 4rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.swatch-background {
+  background: var(--color-background);
+}
+
+.swatch-surface {
+  background: var(--color-surface);
+}
+
+.swatch-text {
+  background: var(--color-text);
+}
+
+.swatch-action {
+  background: var(--color-action);
+}
+
+/* Grid columns for small and larger screens */
+@media (min-width: 48rem) {
+  .token-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 72rem) {
+  .token-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* S3 Typography */
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--color-text);
+  background: var(--color-background);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  line-height: var(--line-height-tight);
+}
+
+.type-sample {
+  max-width: var(--text-measure);
+}
+
+.type-note,
+.metadata {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+code {
+  font-family: monospace;
+}
+
+/* S3 Responsiveness */
+h1 {
+  font-size: var(--font-size-xxl);
+}
+
+h2 {
+  font-size: var(--font-size-xl);
+}
+
+h3 {
+  font-size: var(--font-size-lg);
+}
+
+@media (min-width: 48rem) {
+  h1 {
+    font-size: var(--font-size-h1-wide);
+  }
+
+  h2 {
+    font-size: var(--font-size-h2-wide);
+  }
+
+  h3 {
+    font-size: var(--font-size-h3-wide);
+  }
+
+  .surface-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* s3 Links and Focus */
+a {
+  color: var(--color-action);
+}
+
+a:hover {
+  color: var(--color-action-hover);
+}
+
+a:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+/* S4 Actions & States */
+
+.action-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.button {
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.button-primary {
+  background: var(--color-action);
+  color: var(--color-action-text);
+}
+
+.button-primary:hover {
+  background: var(--color-action-hover);
+}
+
+.button-secondary {
+  background: var(--color-surface);
+  color: var(--color-action);
+  border-color: var(--color-action);
+}
+
+.button-secondary:hover {
+  background: var(--color-background);
+}
+
+.button:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+.button:active {
+  transform: translateY(1px);
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.usage-note {
+  max-width: var(--text-measure);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+/* S5 Surfaces and Content Patterns */
+
+.surface-grid {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.card {
+  padding: var(--space-md);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.card-prominent {
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.notice {
+  max-width: var(--text-measure);
+  padding: var(--space-md);
+  background: var(--color-surface);
+  border-left: 0.25rem solid var(--color-action);
+  border-radius: var(--radius-sm);
+}
+
+.media-placeholder {
+  display: grid;
+  place-items: center;
+  min-height: 12rem;
+  max-width: var(--text-measure);
+  padding: var(--space-md);
+  background: var(--color-surface);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-muted);
+}
+
+/* S6 Control Foundations */
+
+.control-group {
+  display: grid;
+  gap: var(--space-xs);
+  max-width: 30rem;
+  margin-bottom: var(--space-md);
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  padding: var(--space-sm);
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+fieldset {
+  padding: var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+legend {
+  padding: 0 var(--space-xs);
+}
